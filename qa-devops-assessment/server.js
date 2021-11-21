@@ -27,10 +27,10 @@ var rollbar = new Rollbar({
 
 // record a generic message and send it to Rollbar
 rollbar.log('Hello world!')
-rollbar.warning('It is about to go down!')
+rollbar.warning('The duel is about to go down!')
 rollbar.info('Hey!They want our bots!')
 rollbar.log('Players are you ready?!')
-rollbar.critical('Get chu your five!')
+rollbar.critical('Get your five bot cards!')
 
 
 app.get('/api/robots', (req, res) => {

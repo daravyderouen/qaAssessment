@@ -18,6 +18,34 @@ describe('shuffleArray should', () => {
          expect("Prime Information Drone").toContain("Drone")
      })
      
-     test('length in shuffleArray', )
+     test('length in shuffleArray', () => {
+         const bots = [
+             'The Hammer',
+             'Crowbar',
+             'Rusty',
+             'Beta',
+             'Prime Information Drone',
+             'BroBot',
+             'Nozzle',
+             'Globotron',
+             'Self-Aware Garbage Android', 
+             'Mechi'
+         ];
+         expect(bots).toEqual(expect.arrayContaining(
+            [
+                'The Hammer',
+             'Crowbar',
+             'Rusty',
+             'Beta',
+             'Prime Information Drone',
+             'BroBot',
+             'Nozzle',
+             'Globotron',
+             'Self-Aware Garbage Android', 
+             'Mechi'
+            ]
+        ));
+        expect(bots).toHaveLength(10);
+     })
 
 })

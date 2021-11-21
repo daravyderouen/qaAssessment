@@ -11,15 +11,17 @@ app.use(express.static("public"));
 
 app.get("/styles", (req, res) => {
   res.sendFile(path.join(__dirname, "public/index.css"));
+  rollbar.log('They need CSS!')
 });
 app.get("/js", (req, res) => {
   res.sendFile(path.join(__dirname, "public/index.js"));
+  rollbar.log('Hey, they started me up again')
 });
 
 // include and initialize the rollbar library with your access token
 var rollbar = new Rollbar({
   accessToken: 'add91fdd46454f7ba7ea7ed90236d4d8',
-  captureUncaught: true,
+  captureUncaught: true,rollbar.log('Hello world!')
   captureUnhandledRejections: true,
 })
 

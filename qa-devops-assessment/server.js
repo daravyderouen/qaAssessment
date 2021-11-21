@@ -49,7 +49,7 @@ app.get('/api/robots/five', (req, res) => {
         let shuffled = shuffleArray(bots)
         let choices = shuffled.slice(0, 5)
         let compDuo = shuffled.slice(6, 8)
-        rollbar.critical('Get chu your five!')
+        rollbar.critical('Get your five bot cards!')
         res.status(200).send({choices, compDuo})
     } catch (error) {
         console.log('ERROR GETTING FIVE BOTS', error)
@@ -80,7 +80,7 @@ app.post('/api/duel', (req, res) => {
             res.status(200).send('You lost!')
         } else {
             playerRecord.losses++
-            rollbar.warning('It is about to go down!')
+            rollbar.warning('The duel is about to go down!')
             res.status(200).send('You won!')
         }
     } catch (error) {

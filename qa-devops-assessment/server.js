@@ -21,7 +21,7 @@ app.get("/js", (req, res) => {
 // include and initialize the rollbar library with your access token
 var rollbar = new Rollbar({
   accessToken: 'add91fdd46454f7ba7ea7ed90236d4d8',
-  captureUncaught: true,rollbar.log('Hello world!')
+  captureUncaught: true,
   captureUnhandledRejections: true,
 })
 
